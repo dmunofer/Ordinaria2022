@@ -1,18 +1,5 @@
-import datetime
-
-class Tweet():
-    def __init__(self, tweet=str):
-        if len(tweet)>140:
-            raise Exception("Máximo 140 caracteres")
-        else:
-            self.tweet=tweet
-
-class Timeline():
-    def __init__(self):
-        self.timeline=[]
-
-    def añadir_tweet(self, tweet):
-        self.timeline.append(tweet)
+from clase_Timeline import Timeline
+from clase_Tweet import Tweet
 
 class UserAccount(Tweet, Timeline):
     def __init__(self, alias=str,email=str, timeline=Timeline):
@@ -31,16 +18,9 @@ class UserAccount(Tweet, Timeline):
         for follower in self.followers:
             follower.añadir_tweet(tweet1)
 
-class DirectMessage(Tweet, UserAccount):
-    def __init__(self,message=Tweet, sender=UserAccount, receiver=UserAccount):
-        self.message=message
-        self.sender=sender
-        self.receiver=receiver
-        self.time=datetime
-
-
-
-
-    
-
-
+    def get_alias(self):
+        return self.alias
+    def get_email(self):
+        return self.email
+    def get_timeline(self):
+        return self.timeline
