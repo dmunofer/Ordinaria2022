@@ -24,3 +24,10 @@ class UserAccount(Tweet, Timeline):
         return self.email
     def get_timeline(self):
         return self.timeline
+
+    def set_alias(self,string):
+        self.alias=string
+    def set_email(self, nemail):
+        self.email=nemail
+    def set_timeline(self, ntimeline):
+        self.timeline=ntimeline

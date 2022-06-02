@@ -7,3 +7,6 @@ class Tweet():
 
     def get_tweet(self):
         return self.tweet
+
+    def set_tweet(self, tweetx):
+        self.tweet=tweetx

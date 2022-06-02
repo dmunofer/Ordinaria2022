@@ -7,3 +7,7 @@ class Timeline():
 
     def get_timeline(self):
         return self.timeline
+
+    def set_timeline(self, timeline):
+        self.timeline = timeline
+
