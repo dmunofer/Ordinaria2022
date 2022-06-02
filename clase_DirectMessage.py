@@ -12,7 +12,7 @@ class DirectMessage(Tweet, UserAccount):
         self.time=datetime
 
     def __str__(self):
-        cadena = "Mensaje:"
+        print(self.message)
 
     def get_message(self):
         return self.message

@@ -5,6 +5,9 @@ class Tweet():
         else:
             self.tweet=tweet
 
+    def __str__(self):
+        print(self.tweet)
+
     def get_tweet(self):
         return self.tweet
 

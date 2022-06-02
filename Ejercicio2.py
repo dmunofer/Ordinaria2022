@@ -22,6 +22,17 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
 
+import pandas as pd
+
 
 #2.Lectura de datos
+
+data_train= pd.read_csv("train.csv")
+data_test=pd.read_csv("test.csv")
+data_sample=pd.read_csv("sample_submission.csv")
+
+def eliminar_nulos_train():
+    data_train.dropna()
+    return data_train
+
 
